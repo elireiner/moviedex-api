@@ -7,7 +7,9 @@ const movies = require('./movie-data-small.json');
 
 const app = express();
 
-app.use(morgan('dev'))
+const morganStetting = process.env.NODE_ENV === 'production' ?
+'tiny' : 'dev';
+app.use(morgan(morganStetting))
 app.use(helmet())
 app.use(cors())
 
