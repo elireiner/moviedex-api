@@ -4,6 +4,7 @@ const morgan = require('morgan');
 const cors = require('cors');
 const helmet = require('helmet');
 const movies = require('./movie-data-small.json');
+console.log("Hello, world!");
 
 const app = express();
 
